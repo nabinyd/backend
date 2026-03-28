@@ -34,7 +34,7 @@ def create_app():
     app.register_blueprint(inspection_bp, url_prefix='/api/inspection')
     app.register_blueprint(weather_bp, url_prefix='/api/weather')
 
-    register_socket_events(socketio, store)
+    register_socket_events(socketio, store, app)
 
     return app, socketio
 
